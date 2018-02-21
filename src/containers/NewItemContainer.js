@@ -11,7 +11,10 @@ const mapStateToProps = ({ newItemValue }) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({updateNewItemValue, addNewItem}, dispatch);
+  return bindActionCreators({
+    updateNewItemValue,
+    onSubmit: addNewItem
+  }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewItem);

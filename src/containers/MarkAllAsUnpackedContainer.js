@@ -8,8 +8,9 @@ import { markAllAsUnpacked } from '../actions/items-actions';
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ markAllAsUnpacked }, dispatch);
 };
-connect(null, mapDispatchToProps)(({ markAllAsUnpacked }) => {
+
+export default connect(null, mapDispatchToProps)(({ markAllAsUnpacked }) => (
   <button className="button full-width" onClick={markAllAsUnpacked}>
     Mark All As Unpacked
   </button>
-});
+));

@@ -13,7 +13,9 @@ export default function(state = {}, action) {
 
   if (action.type === TOGGLE_ITEM) {
     return state.map((item) => {
+      console.log('What is the state of the items', state);
       if (item.id === action.id) { return { ...item, packed: !item.packed } }
+      return item;
     });
   }
 
